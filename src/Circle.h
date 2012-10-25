@@ -21,40 +21,50 @@ public:
         size = 10;
     }
     
-    void display(){
-        constrainColors();
+    void display(float i){
+//        constrainColors();
         ofSetColor(color);
         ofCircle(position, size);
+    
+        
+        ofSetColor(255);
+        
+        float arrayLocation = i;
+        stringstream msg;
+        msg << "arrayLocation = " << arrayLocation << endl  << "color.b = " << color.b << endl;
+        ofDrawBitmapString(msg.str(), position);
     }
     
     void addBlue(){
         color.b += 10;
+        color.clamp();
     }
     
     void removeBlue(){
         color.b -= 10;
+        color.clamp();
     }
     
-    void constrainColors(){
-        if(color.r > 255){
-            color.r = 255;
-        }
-        if(color.r < 0){
-            color.r = 0;
-        }
-        if(color.g > 255){
-            color.g = 255;
-        }
-        if(color.g < 0){
-            color.g = 0;
-        }
-        if(color.b > 255){
-            color.b = 255;
-        }
-        if(color.b < 0){
-            color.b = 0;
-        }
-    }
+//    void constrainColors(){
+//        if(color.r > 255){
+//            color.r = 255;
+//        }
+//        if(color.r < 0){
+//            color.r = 0;
+//        }
+//        if(color.g > 255){
+//            color.g = 255;
+//        }
+//        if(color.g < 0){
+//            color.g = 0;
+//        }
+//        if(color.b > 255){
+//            color.b = 255;
+//        }
+//        if(color.b < 0){
+//            color.b = 0;
+//        }
+//    }
     
     
     ofPoint position;

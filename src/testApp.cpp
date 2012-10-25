@@ -48,7 +48,7 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
     for(int i = 0; i < NUMBER_OF_CIRCLES; i++){
-        circles[i].display();
+        circles[i].display(i);
     }
     
     for(int i = 0; i < NUMBER_OF_BLUE; i++){
