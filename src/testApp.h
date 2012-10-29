@@ -6,8 +6,11 @@
 #include "Blue.h"
 #include "Circle.h"
 
-#define NUMBER_OF_CIRCLES 2
-#define NUMBER_OF_BLUE 1
+#define NUMBER_OF_CIRCLES 64
+#define NUMBER_OF_BLUE 25
+#define NUMBER_OF_RED 25
+#define NUMBER_OF_GREEN 25
+#define GRID_EDGE 8
 
 class testApp : public ofBaseApp{
 
@@ -29,5 +32,11 @@ class testApp : public ofBaseApp{
     int counter;
     Circle circles[NUMBER_OF_CIRCLES];
     Blue blues[NUMBER_OF_BLUE];
+    Red reds[NUMBER_OF_RED];
+    Green greens[NUMBER_OF_GREEN];
+    bool showRed;
+    bool showGreen;
+    bool showBlue;
+    bool showMsg;
 		
 };
